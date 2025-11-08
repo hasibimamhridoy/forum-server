@@ -14,7 +14,7 @@ const app = express()
 const server = http.createServer(app)
 const io = new Server(server, {
   cors: {
-    origin: ['http://localhost:3000', 'https://chatty-phi.vercel.app'], // Allow your front-end origin
+    origin: ['http://localhost:3000', 'https://chatty-phi.vercel.app', 'https://forum.machvat.com'], // Allow your front-end origin
     credentials: true
   }
 })
@@ -22,7 +22,7 @@ const io = new Server(server, {
 // Middleware
 app.use(
   cors({
-    origin: ['http://localhost:3000', 'https://chatty-phi.vercel.app'],
+    origin: ['http://localhost:3000', 'https://chatty-phi.vercel.app', 'https://forum.machvat.com'],
     credentials: true
   })
 )
