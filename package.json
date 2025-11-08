@@ -1,0 +1,62 @@
+{
+  "name": "forum-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.ts",
+  "scripts": {
+    "start": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "lint:check": "eslint --ignore-path .eslintignore --ext .js,.ts .",
+    "lint:fix": "eslint . --fix",
+    "prettier:check": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
+    "prettier-fix": "prettie --write .",
+    "lint-prettier": "yarn lint:check && yarn prettier:check",
+    "husky:setup": "yarn husky install && yarn husky add .husky/pre-commit \"yarn lint-staged\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hasib Imam",
+  "license": "ISC",
+  "lint-staged": {
+    "src/**/*.ts": "yarn lint-prettier"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.14",
+    "@types/express": "^4.17.19",
+    "@types/morgan": "^1.9.10",
+    "eslint-config-prettier": "^9.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.0",
+    "pinst": "^3.0.0",
+    "prettier": "^3.0.3",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@types/bcrypt": "^5.0.1",
+    "@types/cookie-parser": "^1.4.5",
+    "@types/jsonwebtoken": "^9.0.4",
+    "@typescript-eslint/eslint-plugin": "^6.7.5",
+    "@typescript-eslint/parser": "^6.7.5",
+    "axios": "^1.13.2",
+    "bcrypt": "^5.1.1",
+    "bull": "^4.16.5",
+    "bullmq": "^5.63.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.51.0",
+    "express": "^4.18.2",
+    "helmet": "^8.1.0",
+    "http-status": "^1.7.3",
+    "ioredis": "^5.8.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.6.2",
+    "morgan": "^1.10.1",
+    "openai": "^6.8.1",
+    "redis": "^5.9.0",
+    "socket.io": "^4.8.1",
+    "winston": "^3.11.0",
+    "winston-daily-rotate-file": "^4.7.1",
+    "zod": "^3.22.4"
+  }
+}

@@ -1,0 +1,17 @@
+Dockerfile
+.dockerignore
+node_modules
+npm-debug.log
+README.md
+.next
+.git
+dist
+.vscode
+.husky
+filter.js
+.eslint*
+vercel.json
+test.js
+.prettierrc
+.gitignore
+README.md
